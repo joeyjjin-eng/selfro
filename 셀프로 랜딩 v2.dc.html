@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#8E2B22"></rect><text x="50" y="62" font-size="34" font-weight="800" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif">S</text></svg></template>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF;color:#1F1714;font-family:"Pretendard Variable",Pretendard,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+*,*::before,*::after{font-family:"Pretendard Variable",Pretendard,-apple-system,sans-serif!important;letter-spacing:0!important}
+a{color:#1F1714;text-decoration:none}
+a:hover{color:#8E2B22}
+input,select,textarea,button{font-family:inherit}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#FFFFFF">
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #F1ECE8">
+  <div style="max-width:1200px;margin:0 auto;padding:0 28px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="#top" onClick="{{ goTop }}" style="display:flex;align-items:center;gap:9px">
+      <img src="assets/seal.png" alt="셀프로" style="width:32px;height:32px;border-radius:50%">
+      <span style="font-size:21px;font-weight:800;letter-spacing:-0.04em">셀프<span style="color:#8E2B22">로</span></span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:2px;flex-wrap:wrap;justify-content:flex-end">
+      <sc-for list="{{ nav }}" as="item" hint-placeholder-count="4">
+        <a href="{{ item.href }}" onClick="{{ item.onClick }}" style="padding:9px 13px;font-size:15px;font-weight:500;border-radius:10px;color:{{ item.color }}" style-hover="background:#F7F3F1">{{ item.label }}</a>
+      </sc-for>
+      <a href="#s5" onClick="{{ goContact }}" style="margin-left:10px;padding:10px 18px;font-size:15px;font-weight:700;border-radius:10px;background:#8E2B22;color:#FFFFFF" style-hover="background:#7A231B;color:#FFFFFF">문의하기</a>
+    </nav>
+  </div>
+</header>
+
+<section id="top" style="position:relative;overflow:hidden;background-image:radial-gradient(ellipse 50% 45% at 50% 0%,rgba(142,43,34,0.07),transparent 70%),linear-gradient(rgba(31,23,20,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(31,23,20,0.035) 1px,transparent 1px);background-size:auto,20px 20px,20px 20px">
+  <div style="max-width:1100px;margin:0 auto;padding:96px 28px 0;display:flex;flex-direction:column;align-items:center;text-align:center">
+    <p style="margin:0 0 22px;font-size:15px;font-weight:700;color:#B0564A;letter-spacing:0.02em">✦ 24시간 작성완료 · 요건사실 기준 검토 ✦</p>
+    <h1 style="margin:0;font-size:clamp(40px,6vw,72px);line-height:1.18;font-weight:800;letter-spacing:-0.045em">셀프 작성과 정식 법률문서 사이,<br><span style="background:linear-gradient(180deg,transparent 58%,#F7D9CF 58%);padding:0 6px;color:#8E2B22">셀프로</span></h1>
+    <p style="margin:24px 0 0;font-size:18px;line-height:1.5;color:#6B605A">소액소송 · 의료기관 · 손해배상 · 회사설립</p>
+    <div style="margin-top:36px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+      <a href="#s5" onClick="{{ goContact }}" style="padding:16px 28px;border-radius:12px;background:linear-gradient(135deg,#A63A2E,#7A231B);color:#FFFFFF;font-size:16px;font-weight:700;box-shadow:0 10px 24px -10px rgba(142,43,34,0.6)" style-hover="color:#FFFFFF;filter:brightness(1.08)">문의접수</a>
+      <a href="#s1" onClick="{{ goPricing }}" style="padding:16px 28px;border-radius:12px;background:#FFFFFF;border:1px solid #ECE4DF;color:#1F1714;font-size:16px;font-weight:600;box-shadow:0 4px 14px -8px rgba(31,23,20,0.2)" style-hover="border-color:#1F1714">비용안내 보기</a>
+    </div>
+
+    <div style="position:relative;width:100%;max-width:880px;height:360px;margin-top:64px">
+      <div style="position:absolute;left:50%;top:40px;transform:translateX(-50%);width:300px;background:#FFFFFF;border:1px solid #EFE7E2;border-radius:20px;box-shadow:0 30px 60px -30px rgba(80,30,20,0.35);padding:24px;text-align:left;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:13px;font-weight:600;color:#8A7F79">소액사건 소장</span><img src="assets/seal.png" alt="" style="width:30px;height:30px;border-radius:50%"></div>
+        <div style="height:10px;width:70%;border-radius:4px;background:#F1ECE8"></div>
+        <div style="height:8px;width:92%;border-radius:4px;background:#F5F1EE"></div>
+        <div style="height:8px;width:84%;border-radius:4px;background:#F5F1EE"></div>
+        <div style="height:8px;width:60%;border-radius:4px;background:#F5F1EE"></div>
+        <div style="margin-top:6px;display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px dashed #EDE4DF"><span style="font-size:13px;color:#8A7F79">요건사실 검토</span><span style="font-size:13px;font-weight:700;color:#3F7A5A">완료</span></div>
+      </div>
+      <div style="position:absolute;left:4%;top:70px;display:flex;align-items:center;gap:10px;background:#FFFFFF;border:1px solid #F3E6E1;border-radius:14px;padding:12px 16px;box-shadow:0 14px 30px -18px rgba(80,30,20,0.35);transform:rotate(-4deg)"><span style="width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#FBE3DC,#F5CFC3);display:grid;place-items:center"><span style="width:16px;height:16px;background:#8E2B22;-webkit-mask:url(assets/icons/file-lock.svg) center/contain no-repeat;mask:url(assets/icons/file-lock.svg) center/contain no-repeat"></span></span><span style="font-size:14px;font-weight:700">내용증명</span></div>
+      <div style="position:absolute;left:10%;top:210px;display:flex;align-items:center;gap:10px;background:#FFFFFF;border:1px solid #F1EADB;border-radius:14px;padding:12px 16px;box-shadow:0 14px 30px -18px rgba(80,30,20,0.35);transform:rotate(3deg)"><span style="width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#FBF0DA,#F3DFB8);display:grid;place-items:center"><span style="width:17px;height:17px;background:#9A6A1E;-webkit-mask:url(assets/icons/scale.svg) center/contain no-repeat;mask:url(assets/icons/scale.svg) center/contain no-repeat"></span></span><span style="font-size:14px;font-weight:700">지급명령</span></div>
+      <div style="position:absolute;right:5%;top:90px;display:flex;align-items:center;gap:10px;background:#FFFFFF;border:1px solid #E3ECE6;border-radius:14px;padding:12px 16px;box-shadow:0 14px 30px -18px rgba(30,60,40,0.3);transform:rotate(4deg)"><span style="width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#E3F1E8,#CFE5D7);display:grid;place-items:center"><span style="width:16px;height:16px;background:#3F7A5A;-webkit-mask:url(assets/icons/user-check.svg) center/contain no-repeat;mask:url(assets/icons/user-check.svg) center/contain no-repeat"></span></span><span style="font-size:14px;font-weight:700">변호사 검토</span></div>
+      <div style="position:absolute;right:12%;top:230px;display:flex;align-items:center;gap:8px;background:#1F1714;color:#FFFFFF;border-radius:12px;padding:10px 14px;box-shadow:0 14px 30px -14px rgba(31,23,20,0.5);transform:rotate(-3deg)"><span style="font-size:13px;font-weight:700">24시간 내 전달</span></div>
+      <span style="position:absolute;left:28%;top:118px;width:90px;border-top:2px dashed #E3D3CC"></span>
+      <span style="position:absolute;right:26%;top:140px;width:80px;border-top:2px dashed #D3E2D8"></span>
+    </div>
+  </div>
+</section>
+
+<section id="why" data-screen-label="Why 셀프로" style="background:linear-gradient(180deg,#FFFFFF 0%,#FFFFFF 30%,#F1E6DC 100%);padding:96px max(28px,calc(50% - 572px)) 112px">
+  <div style="display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:48px">
+    <span style="font-size:14px;font-weight:700;color:#B0564A;margin-bottom:14px">Why 셀프로</span>
+    <h2 style="margin:0;font-size:clamp(30px,3.8vw,44px);font-weight:800;letter-spacing:-0.035em;line-height:1.25">변호사 수임료 부담 없이,<br>변호사 수준의 문서를.</h2>
+    <p style="margin:16px 0 0;font-size:17px;color:#6B605A;line-height:1.5">혼자 쓴 문서는 요건사실이 빠지기 쉽고, 정식 로펌 의뢰는 비용과 시간이 부담입니다.<br>셀프로는 그 중간에서 합리적인 비용과 속도로 완성도를 책임집니다.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px">
+    <div style="border-radius:24px;padding:32px;background:linear-gradient(160deg,#FFF6F3 0%,#FFFFFF 60%);border:1px solid #E8CEC6;display:flex;flex-direction:column">
+      <span style="width:52px;height:52px;border-radius:16px;background:#A63A2E;display:grid;place-items:center;margin-bottom:28px"><span style="width:26px;height:26px;background:#FFFFFF;-webkit-mask:url(assets/icons/user-check.svg) center/contain no-repeat;mask:url(assets/icons/user-check.svg) center/contain no-repeat"></span></span>
+      <h3 style="margin:0;font-size:21px;font-weight:700;letter-spacing:-0.02em;line-height:1.4">24시간 작성완료</h3>
+      <p style="margin:6px 0 0;font-size:15px;color:#6B605A;line-height:1.5">계약체결 후 24시간 내 변호사가 문서 작성을 완료합니다.</p>
+    </div>
+    <div style="border-radius:24px;padding:32px;background:linear-gradient(160deg,#F6F4FD 0%,#FFFFFF 60%);border:1px solid #D3CCEE;display:flex;flex-direction:column">
+      <span style="width:52px;height:52px;border-radius:16px;background:#6A5FB0;display:grid;place-items:center;margin-bottom:28px"><span style="width:26px;height:26px;background:#FFFFFF;-webkit-mask:url(assets/icons/shield-check.svg) center/contain no-repeat;mask:url(assets/icons/shield-check.svg) center/contain no-repeat"></span></span>
+      <h3 style="margin:0;font-size:21px;font-weight:700;letter-spacing:-0.02em;line-height:1.4">요건사실 기준 검토</h3>
+      <p style="margin:6px 0 0;font-size:15px;color:#6B605A;line-height:1.5">필요한 사실관계가 빠지지 않았는지 요건사실 단위로 확인합니다.</p>
+    </div>
+    <div style="border-radius:24px;padding:32px;background:linear-gradient(160deg,#F2F8F4 0%,#FFFFFF 60%);border:1px solid #C6DECF;display:flex;flex-direction:column">
+      <span style="width:52px;height:52px;border-radius:16px;background:#3F7A5A;display:grid;place-items:center;margin-bottom:28px"><span style="width:28px;height:28px;background:#FFFFFF;-webkit-mask:url(assets/icons/scale.svg) center/contain no-repeat;mask:url(assets/icons/scale.svg) center/contain no-repeat"></span></span>
+      <h3 style="margin:0;font-size:21px;font-weight:700;letter-spacing:-0.02em;line-height:1.4">합리적인 비용</h3>
+      <p style="margin:6px 0 0;font-size:15px;color:#6B605A;line-height:1.5">정식 소송 위임 대비 부담을 낮춘 단건형 작성 서비스입니다.</p>
+    </div>
+  </div>
+</section>
+
+<section id="s1" data-screen-label="01 소액소송" style="padding: 96px 0; background-color: #FFFFFF; padding-top: 106px; padding-bottom: 106px">
+  <div style="max-width:1200px;margin:0 auto;padding:0 28px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px">
+      <div style="display:flex;flex-direction:column">
+        <span style="font-size:14px;font-weight:700;color:#B0564A;margin-bottom:14px">01 · 셀프로 소액소송</span>
+        <h2 style="margin:0;font-size:clamp(30px,3.8vw,44px);font-weight:800;letter-spacing:-0.035em;line-height:1.25">비용안내</h2>
+      </div>
+      <p style="margin:0;font-size:16px;color:#6B605A;line-height:1.5">모든 서비스는 법무법인 제휴 변호사가 직접 작성·검토합니다.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px;align-items:stretch">
+      <div style="background:#FFFFFF;border:1px solid #EFE8E4;border-radius:22px;padding:28px;display:flex;flex-direction:column">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:22px"><span style="font-size:12px;font-weight:700;color:#5B5290;background:#EFECFA;padding:6px 11px;border-radius:999px">STEP 01</span><span style="width:44px;height:44px;border-radius:12px;background:#EFECFA;display:grid;place-items:center"><span style="width:20px;height:20px;background:#6A5FB0;-webkit-mask:url(assets/icons/file-lock.svg) center/contain no-repeat;mask:url(assets/icons/file-lock.svg) center/contain no-repeat"></span></span></div>
+        <h3 style="margin:0;font-size:19px;font-weight:700">내용증명</h3>
+        <p style="margin:6px 0 0;font-size:14px;color:#6B605A;line-height:1.5">계약 위반, 채무 이행 촉구 등에 필요한 내용증명 작성</p>
+        <div style="margin:24px 0;font-size:32px;font-weight:800;letter-spacing:-0.03em">200,000<span style="font-size:15px;font-weight:600;color:#8A7F79;margin-left:3px">원</span></div>
+        <ul style="margin:0;padding:18px 0 0;border-top:1px solid #F1ECE8;list-style:none;line-height:1.5;display:flex;flex-direction:column;gap:10px;font-size:14px;color:#4A403B"><li>✓ 사실관계 기반 초안 검토</li><li>✓ 요건사실 기준 작성</li><li>✓ 24시간 내 작성완료</li></ul>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #EFE8E4;border-radius:22px;padding:28px;display:flex;flex-direction:column">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:22px"><span style="font-size:12px;font-weight:700;color:#3F7A5A;background:#E6F3EA;padding:6px 11px;border-radius:999px">STEP 02</span><span style="width:44px;height:44px;border-radius:12px;background:#E6F3EA;display:grid;place-items:center"><span style="width:22px;height:22px;background:#3F7A5A;-webkit-mask:url(assets/icons/scale.svg) center/contain no-repeat;mask:url(assets/icons/scale.svg) center/contain no-repeat"></span></span></div>
+        <h3 style="margin:0;font-size:19px;font-weight:700">지급명령</h3>
+        <p style="margin:6px 0 0;font-size:14px;color:#6B605A;line-height:1.5">금전채권을 신속히 회수하기 위한 지급명령 신청서 작성</p>
+        <div style="margin:24px 0;font-size:32px;font-weight:800;letter-spacing:-0.03em">300,000<span style="font-size:15px;font-weight:600;color:#8A7F79;margin-left:3px">원</span></div>
+        <ul style="margin:0;padding:18px 0 0;border-top:1px solid #F1ECE8;list-style:none;line-height:1.5;display:flex;flex-direction:column;gap:10px;font-size:14px;color:#4A403B"><li>✓ 요건사실 기준 사실관계 정리</li><li>✓ 지급명령 신청서 작성</li><li>✓ 24시간 내 작성완료</li></ul>
+      </div>
+      <div style="border-radius:22px;padding:2px;background:linear-gradient(135deg,#C24A38,#E8A48C,#8E2B22);box-shadow:0 24px 48px -24px rgba(142,43,34,0.5)">
+        <div style="height:100%;box-sizing:border-box;background:#FFFFFF;border-radius:20px;padding:26px;display:flex;flex-direction:column">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:22px"><span style="font-size:12px;font-weight:700;color:#8E2B22;background:#FBEAE5;padding:6px 11px;border-radius:999px">STEP 03</span><span style="width:44px;height:44px;border-radius:12px;background:#FBEAE5;display:grid;place-items:center"><span style="width:20px;height:20px;background:#A63A2E;-webkit-mask:url(assets/icons/shield-check.svg) center/contain no-repeat;mask:url(assets/icons/shield-check.svg) center/contain no-repeat"></span></span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h3 style="margin:0;font-size:19px;font-weight:700">소액사건 소장</h3><span style="font-size:12px;font-weight:700;color:#FFFFFF;background:linear-gradient(135deg,#B8473A,#7A231B);padding:5px 10px;border-radius:8px;white-space:nowrap">가장 많이 찾는</span></div>
+          <p style="margin:6px 0 0;font-size:14px;color:#6B605A;line-height:1.5">청구취지·청구원인을 포함한 소액사건 소장 작성</p>
+          <div style="margin:24px 0;font-size:32px;font-weight:800;letter-spacing:-0.03em;color:#8E2B22">500,000<span style="font-size:15px;font-weight:600;color:#8A7F79;margin-left:3px">원</span></div>
+          <ul style="margin:0;padding:18px 0 0;border-top:1px solid #F1ECE8;list-style:none;line-height:1.5;display:flex;flex-direction:column;gap:10px;font-size:14px;color:#4A403B"><li>✓ 요건사실 기준 사실관계 정리</li><li>✓ 청구취지·청구원인·입증방법 작성</li><li>✓ 24시간 내 작성완료</li></ul>
+        </div>
+      </div>
+      <div style="background:linear-gradient(160deg,#FBF4EA,#FFFFFF);border:1px dashed #E6D6C3;border-radius:22px;padding:28px;display:flex;flex-direction:column">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:22px"><span style="font-size:12px;font-weight:700;color:#8A6420;background:#F8EED9;padding:6px 11px;border-radius:999px">OPTION</span><span style="width:44px;height:44px;border-radius:12px;background:#F8EED9;display:grid;place-items:center"><span style="width:20px;height:20px;background:#A8742A;-webkit-mask:url(assets/icons/user-check.svg) center/contain no-repeat;mask:url(assets/icons/user-check.svg) center/contain no-repeat"></span></span></div>
+        <h3 style="margin:0;font-size:19px;font-weight:700">변호사 명의작성 및 제출대행</h3>
+        <p style="margin:6px 0 0;font-size:14px;color:#6B605A;line-height:1.5">선택 옵션 · 변호사 명의로 정식 발급하고 발송·접수까지 대행</p>
+        <div style="margin:24px 0;font-size:32px;font-weight:800;letter-spacing:-0.03em">+150,000<span style="font-size:15px;font-weight:600;color:#8A7F79;margin-left:3px">원</span></div>
+        <ul style="margin:0;padding:18px 0 0;border-top:1px solid #EFE4D6;list-style:none;line-height:1.5;display:flex;flex-direction:column;gap:10px;font-size:14px;color:#4A403B"><li>✓ 변호사 명의 정식 문서 발급</li><li>✓ 내용증명 발송·지급명령/소장 제출 대행</li><li>✓ 작성 서비스에 추가 선택 가능</li></ul>
+      </div>
+    </div>
+    <p style="margin:24px 0 0;font-size:13px;color:#8A7F79;line-height:1.5">기본 작성 서비스는 검토된 초안 형태로 전달되며,<br>변호사 명의 발급과 발송·제출 대행은 위 옵션을 추가로 선택해 진행합니다.</p>
+  </div>
+</section>
+<section id="s2" data-screen-label="02 의료기관" style="--ck:#5B4FB0;--ckbg:#E4DFF7;background:#F6F4FD;max-width:1144px;width:calc(100% - 56px);box-sizing:border-box;margin:0 auto 24px;border-radius:32px;padding:80px clamp(28px,5vw,64px)">
+  <span style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:800;letter-spacing:0.12em;color:var(--ck,#B0564A);margin-bottom:18px"><span style="width:24px;height:2px;border-radius:2px;background:var(--ck,#B0564A)"></span>02</span>
+  <h2 style="margin:0;font-size:clamp(30px,3.8vw,44px);font-weight:800;letter-spacing:-0.035em;line-height:1.25">셀프로 의료기관</h2>
+  <p style="margin:6px 0 40px;font-size:17px;color:#6B605A;line-height:1.5">필요한 문서 작성에 합의대리까지</p>
+  <div style="display:grid;grid-template-columns:minmax(0,1.3fr) auto minmax(0,1fr) auto minmax(0,1fr);gap:0 14px;align-items:stretch">
+    <div style="background:#FFFFFF;border:1px solid rgba(31,23,20,0.06);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:12px;font-size:16px;font-weight:600;line-height:1.5"><span style="display:flex;align-items:center;gap:10px"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:var(--ckbg);color:var(--ck);display:grid;place-items:center;font-size:11px;font-weight:900">✓</span>합의서 작성</span><span style="display:flex;align-items:center;gap:10px"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:var(--ckbg);color:var(--ck);display:grid;place-items:center;font-size:11px;font-weight:900">✓</span>손해액 산정 자문</span><span style="display:flex;align-items:center;gap:10px"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:var(--ckbg);color:var(--ck);display:grid;place-items:center;font-size:11px;font-weight:900">✓</span>내용증명</span><span style="display:flex;align-items:flex-start;gap:10px"><span style="flex:0 0 auto;margin-top:2px;width:20px;height:20px;border-radius:50%;background:var(--ckbg);color:var(--ck);display:grid;place-items:center;font-size:11px;font-weight:900">✓</span><span>고소장 작성<br><span style="font-weight:400;color:#8A7F79;font-size:14px">업무방해 · 명예훼손 · 무고</span></span></span></div>
+    <span style="align-self:center;width:40px;height:40px;border-radius:50%;background:#FFFFFF;border:1px solid #EFE8E4;box-shadow:0 4px 12px -6px rgba(31,23,20,0.25);display:grid;place-items:center;font-size:20px;color:var(--ck)">+</span>
+    <div style="background:#FFFFFF;border:1px solid rgba(31,23,20,0.06);border-radius:22px;padding:28px;display:flex;flex-direction:column"><span style="display:flex;align-items:center;gap:10px;font-size:20px;font-weight:700;line-height:1.4"><span style="flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--ckbg);color:var(--ck);display:grid;place-items:center;font-size:12px;font-weight:900">✓</span>합의대리</span><span style="margin:4px 0 0 32px;font-size:14px;color:#8A7F79;line-height:1.5">타임차지 방식</span></div>
+    <span style="align-self:center;width:40px;height:40px;border-radius:50%;background:#FFFFFF;border:1px solid #EFE8E4;box-shadow:0 4px 12px -6px rgba(31,23,20,0.25);display:grid;place-items:center;font-size:20px;color:var(--ck)">=</span>
+    <div style="background:var(--ck);border-radius:22px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px"><span style="font-size:21px;font-weight:800;line-height:1.4;color:#FFFFFF">문서 작성부터<br>합의까지</span><a href="#s5" onClick="{{ goContact }}" style="align-self:flex-start;padding:10px 16px;border-radius:10px;background:var(--ckbg);font-size:14px;font-weight:700;color:var(--ck)" style-hover="color:var(--ck);background:#FFFFFF">비용 문의 →</a></div>
+  </div>
+</section>
+
+<section id="s3" data-screen-label="03 손해배상" style="--ck:#5E7F2E;--ckbg:#E1ECCB;background:#F3F8EA;max-width:1144px;width:calc(100% - 56px);box-sizing:border-box;margin:0 auto 24px;border-radius:32px;padding:80px clamp(28px,5vw,64px)">
+  <div>
+    <span style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:800;letter-spacing:0.12em;color:var(--ck,#B0564A);margin-bottom:18px"><span style="width:24px;height:2px;border-radius:2px;background:var(--ck,#B0564A)"></span>03</span>
+    <h2 style="margin:0;font-size:clamp(30px,3.8vw,44px);font-weight:800;letter-spacing:-0.035em;line-height:1.25">셀프로 손해배상</h2>
+    <p style="margin:6px 0 0;font-size:17px;color:#6B605A;line-height:1.5">손해배상도 문서부터 합의까지</p>
+    <div style="margin:22px 0 40px;display:flex;flex-wrap:wrap;gap:10px;font-size:15px;font-weight:600">
+      <span style="display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; background-color: #E9F1D9"><span style="width:18px;height:18px;background:#5E7F2E;-webkit-mask:url(assets/icons/car-front.svg) center/contain no-repeat;mask:url(assets/icons/car-front.svg) center/contain no-repeat"></span>교통사고</span>
+      <span style="display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; background-color: #E9F1D9"><span style="width:18px;height:18px;background:#5E7F2E;-webkit-mask:url(assets/icons/landmark.svg) center/contain no-repeat;mask:url(assets/icons/landmark.svg) center/contain no-repeat"></span>국가배상</span>
+      <span style="display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; background-color: #E9F1D9"><span style="width:18px;height:18px;background:#5E7F2E;-webkit-mask:url(assets/icons/hard-hat.svg) center/contain no-repeat;mask:url(assets/icons/hard-hat.svg) center/contain no-repeat"></span>산업재해</span>
+      <span style="display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; background-color: #E9F1D9"><span style="width:18px;height:18px;background:#5E7F2E;-webkit-mask:url(assets/icons/message-warning.svg) center/contain no-repeat;mask:url(assets/icons/message-warning.svg) center/contain no-repeat"></span>명예훼손</span>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,1.3fr) auto minmax(0,1fr) auto minmax(0,1fr);gap:0 14px;align-items:stretch">
+      <div style="background:#FFFFFF;border:1px solid rgba(31,23,20,0.06);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:12px;font-size:16px;font-weight:600;line-height:1.5"><span style="display:flex;align-items:center;gap:10px"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:var(--ckbg);color:var(--ck);display:grid;place-items:center;font-size:11px;font-weight:900">✓</span>합의서 작성</span><span style="display:flex;align-items:center;gap:10px"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:var(--ckbg);color:var(--ck);display:grid;place-items:center;font-size:11px;font-weight:900">✓</span>손해액 산정 자문</span><span style="display:flex;align-items:center;gap:10px"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:var(--ckbg);color:var(--ck);display:grid;place-items:center;font-size:11px;font-weight:900">✓</span>내용증명</span><span style="display:flex;align-items:flex-start;gap:10px"><span style="flex:0 0 auto;margin-top:2px;width:20px;height:20px;border-radius:50%;background:var(--ckbg);color:var(--ck);display:grid;place-items:center;font-size:11px;font-weight:900">✓</span><span>고소장 작성<br><span style="font-weight:400;color:#8A7F79;font-size:14px">업무방해 · 명예훼손 · 무고</span></span></span></div>
+      <span style="align-self:center;width:40px;height:40px;border-radius:50%;background:#FFFFFF;border:1px solid #EFE8E4;box-shadow:0 4px 12px -6px rgba(31,23,20,0.25);display:grid;place-items:center;font-size:20px;color:var(--ck)">+</span>
+      <div style="background:#FFFFFF;border:1px solid rgba(31,23,20,0.06);border-radius:22px;padding:28px;display:flex;flex-direction:column"><span style="display:flex;align-items:center;gap:10px;font-size:20px;font-weight:700;line-height:1.4"><span style="flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--ckbg);color:var(--ck);display:grid;place-items:center;font-size:12px;font-weight:900">✓</span>합의대리</span><span style="margin:4px 0 0 32px;font-size:14px;color:#8A7F79;line-height:1.5">타임차지 방식</span></div>
+      <span style="align-self:center;width:40px;height:40px;border-radius:50%;background:#FFFFFF;border:1px solid #EFE8E4;box-shadow:0 4px 12px -6px rgba(31,23,20,0.25);display:grid;place-items:center;font-size:20px;color:var(--ck)">=</span>
+      <div style="background:var(--ck);border-radius:22px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px"><span style="font-size:21px;font-weight:800;line-height:1.4;color:#FFFFFF">문서 작성부터<br>합의까지</span><a href="#s5" onClick="{{ goContact }}" style="align-self:flex-start;padding:10px 16px;border-radius:10px;background:var(--ckbg);font-size:14px;font-weight:700;color:var(--ck)" style-hover="color:var(--ck);background:#FFFFFF">비용 문의 →</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="s4" data-screen-label="04 회사설립" style="--ck:#3B7CA6;background:#EEF6FB;max-width:1144px;width:calc(100% - 56px);box-sizing:border-box;margin:0 auto 24px;border-radius:32px;padding:80px clamp(28px,5vw,64px)">
+  <div>
+    <span style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:800;letter-spacing:0.12em;color:var(--ck,#B0564A);margin-bottom:18px"><span style="width:24px;height:2px;border-radius:2px;background:var(--ck,#B0564A)"></span>04</span>
+    <h2 style="margin:0;font-size:clamp(30px,3.8vw,44px);font-weight:800;letter-spacing:-0.035em;line-height:1.25">셀프로 회사설립</h2>
+    <p style="margin:6px 0 40px;font-size:17px;color:#6B605A;line-height:1.5">정관작성부터 등기대행까지</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px">
+      <div style="display:flex;gap:20px;align-items:flex-start;background:#FFFFFF;border:1px solid rgba(31,23,20,0.06);border-radius:22px;padding:30px"><span style="flex:0 0 auto;width:48px;height:48px;border-radius:14px;background:#DDEEF8;display:grid;place-items:center"><span style="width:22px;height:22px;background:#3B7CA6;-webkit-mask:url(assets/icons/file-lock.svg) center/contain no-repeat;mask:url(assets/icons/file-lock.svg) center/contain no-repeat"></span></span><div style="display:flex;flex-direction:column"><h3 style="margin:0;font-size:20px;font-weight:700;line-height:1.4">정관작성</h3><p style="margin:4px 0 0;font-size:15px;color:#6B605A;line-height:1.5">의뢰인의 사업내용에 가장 적합한 정관 작성</p></div></div>
+      <div style="display:flex;gap:20px;align-items:flex-start;background:#FFFFFF;border:1px solid rgba(31,23,20,0.06);border-radius:22px;padding:30px"><span style="flex:0 0 auto;width:48px;height:48px;border-radius:14px;background:#DDEEF8;display:grid;place-items:center"><span style="width:24px;height:24px;background:#3B7CA6;-webkit-mask:url(assets/icons/building.svg) center/contain no-repeat;mask:url(assets/icons/building.svg) center/contain no-repeat"></span></span><div style="display:flex;flex-direction:column"><h3 style="margin:0;font-size:20px;font-weight:700;line-height:1.4">등기대행</h3><p style="margin:4px 0 0;font-size:15px;color:#6B605A;line-height:1.5">법인 설립등기 신청 대행</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" data-screen-label="이용절차" style="padding: 96px 0; background-color: #FFFFFF">
+  <div style="max-width:1200px;margin:0 auto;padding:0 28px">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:48px">
+      <span style="font-size:14px;font-weight:700;color:#B0564A;margin-bottom:14px">이용절차</span>
+      <h2 style="margin:0;font-size:clamp(30px,3.8vw,44px);font-weight:800;letter-spacing:-0.035em;line-height:1.25">문의부터 작성완료까지</h2>
+    </div>
+    <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:16px">
+      <div style="background:#FFFFFF;border:1px solid #EFE8E4;border-radius:20px;padding:26px;display:flex;flex-direction:column"><span style="font-size:13px;font-weight:800;color:#B0564A;margin-bottom:18px">STEP 1</span><h3 style="margin:0;font-size:19px;font-weight:700">문의접수</h3><p style="margin:4px 0 0;font-size:14px;color:#6B605A;line-height:1.5">문의접수 또는 카카오톡 상담</p></div>
+      <div style="background:#FFFFFF;border:1px solid #EFE8E4;border-radius:20px;padding:26px;display:flex;flex-direction:column"><span style="font-size:13px;font-weight:800;color:#B0564A;margin-bottom:18px">STEP 2</span><h3 style="margin:0;font-size:19px;font-weight:700">사실관계 확인</h3><p style="margin:4px 0 0;font-size:14px;color:#6B605A;line-height:1.5">자료 확인 및 비용 안내</p></div>
+      <div style="background:#FFFFFF;border:1px solid #EFE8E4;border-radius:20px;padding:26px;display:flex;flex-direction:column"><span style="font-size:13px;font-weight:800;color:#B0564A;margin-bottom:18px">STEP 3</span><h3 style="margin:0;font-size:19px;font-weight:700">계약체결</h3><p style="margin:4px 0 0;font-size:14px;color:#6B605A;line-height:1.5">계약 및 결제</p></div>
+      <div style="background:linear-gradient(145deg,#A63A2E,#6E1F18);color:#FFFFFF;border-radius:20px;padding:26px;display:flex;flex-direction:column;box-shadow:0 20px 40px -22px rgba(142,43,34,0.6)"><span style="font-size:13px;font-weight:800;color:#FBD9CE;margin-bottom:18px">STEP 4</span><h3 style="margin:0;font-size:19px;font-weight:700">작성완료</h3><p style="margin:4px 0 0;font-size:14px;color:#FBE7E0;line-height:1.5">24시간 내 문서 전달</p></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="lawyer" data-screen-label="변호사소개" style="background: linear-gradient(180deg,#F4EEE9,#EADFD6); padding: 112px max(28px,calc(50% - 572px)) 0; overflow: hidden; padding-top: 61px; height: 553px">
+  <span style="display:block;font-size:14px;font-weight:700;color:#B0564A;margin-bottom:14px">변호사소개</span>
+  <h2 style="margin: 0 0 40px; font-size: clamp(30px,3.8vw,44px); font-weight: 800; letter-spacing: -0.035em; line-height: 1.25; margin-bottom: 40px">변호사가 직접<br>작성하고 검토합니다</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:0 56px;direction:rtl">
+    <div style="direction: ltr; padding: 0 0 112px; display: flex; flex-direction: column; justify-content: flex-start; gap: 25px; padding-bottom: 0px; width: 612px; height: 371px">
+      <p style="margin: 0; font-size: clamp(22px,2.4vw,24px); line-height: 1.4; font-weight: 600; letter-spacing: -0.025em">“작은 분쟁일수록 첫 문서가 결과를 좌우합니다.<br>비용 때문에 권리를 포기하지 않도록, <br>필요한 만큼만 정확하게 돕겠습니다.”</p>
+      <div style="display: flex; flex-direction: column">
+        <span style="font-size:20px;font-weight:700">김서윤 변호사</span>
+        <span style="margin-top:4px;font-size:14px;color:#6B605A">법무법인 한결 · 셀프로 대표변호사</span>
+        <ul style="margin: 20px 0 0; padding: 18px 0 0; border-top: 1px solid #EEDFD7; list-style: none; line-height: 1.5; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: #4A403B; padding-right: 18px; padding-top: 0px"><li>· 제9회 변호사시험 합격</li><li>· 고려대학교 법학전문대학원 졸업</li><li>· 대한변호사협회 등록 민사법 전문변호사</li><li>· 前 서울중앙지방법원 조정위원</li></ul>
+      </div>
+    </div>
+    <div style="direction:ltr;min-height:620px;position:relative">
+      <img src="assets/lawyer-cutout.png?v=2" alt="김서윤 변호사" style="position: absolute; left: 292px; transform: translateX(-50%); height: 443px; width: 295px; max-width: none; top: -2px">
+      <span style="display:none;align-items:center;gap:8px;background:#FFFFFF;border-radius:12px;padding:10px 14px;font-size:13px;font-weight:700;box-shadow:0 12px 24px -14px rgba(31,23,20,0.4)"><span style="width:16px;height:16px;background:#3F7A5A;-webkit-mask:url(assets/icons/shield-check.svg) center/contain no-repeat;mask:url(assets/icons/shield-check.svg) center/contain no-repeat"></span>대한변호사협회 등록</span>
+    </div>
+  </div>
+</section><section id="s5" data-screen-label="05 문의하기" style="max-width:1200px;margin:0 auto;padding:112px 28px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px">
+    <div style="display:flex;flex-direction:column">
+      <span style="font-size:14px;font-weight:700;color:#B0564A;margin-bottom:14px">05 · 문의하기</span>
+      <h2 style="margin:0;font-size:clamp(30px,3.8vw,44px);font-weight:800;letter-spacing:-0.035em;line-height:1.25">사건 내용을<br>남겨주세요</h2>
+      <p style="margin:6px 0 0;font-size:16px;color:#6B605A;line-height:1.5">확인 후 담당자가 연락드립니다.</p>
+      <div style="margin-top:44px;display:flex;flex-direction:column;gap:24px">
+        <div style="display:flex;align-items:center;gap:16px"><span style="flex:0 0 auto;width:52px;height:52px;border-radius:50%;background:#F7F1EE;display:grid;place-items:center"><span style="width:22px;height:22px;background:#8E2B22;-webkit-mask:url(assets/icons/message-warning.svg) center/contain no-repeat;mask:url(assets/icons/message-warning.svg) center/contain no-repeat"></span></span><div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700">대표전화</span><span style="margin-top:2px;font-size:15px;color:#6B605A">0000-0000 · 평일 09:00–18:00</span></div></div>
+        <a href="#" onClick="{{ noop }}" style="display:flex;align-items:center;gap:16px" style-hover="color:#1F1714"><span style="flex:0 0 auto;width:52px;height:52px;border-radius:50%;background:#FEE500;display:grid;place-items:center;font-size:15px;font-weight:900;color:#1F1714">K</span><div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700">카카오톡 상담</span><span style="margin-top:2px;font-size:15px;color:#6B605A">@셀프로 · 채팅으로 바로 문의</span></div></a>
+        <div style="display:flex;align-items:center;gap:16px"><span style="flex:0 0 auto;width:52px;height:52px;border-radius:50%;background:#F7F1EE;display:grid;place-items:center"><span style="width:24px;height:24px;background:#8E2B22;-webkit-mask:url(assets/icons/building.svg) center/contain no-repeat;mask:url(assets/icons/building.svg) center/contain no-repeat"></span></span><div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700">주소</span><span style="margin-top:2px;font-size:15px;color:#6B605A;line-height:1.5">서울특별시 ○○구 ○○로 00</span></div></div>
+      </div>
+    </div>
+    <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column">
+        <h3 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-0.03em;line-height:1.3">문의 남기기</h3>
+        <p style="margin:6px 0 28px;font-size:15px;color:#6B605A;line-height:1.5">아래 양식을 작성해 주시면 확인 후 연락드립니다.</p>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:12px">
+            <input required="" placeholder="이름" style="padding:15px 16px;border-radius:10px;border:1px solid #E6DFDA;background:#FFFFFF;font-size:15px;color:#1F1714;outline:none" style-focus="border-color:#8E2B22">
+            <input required="" placeholder="연락처" style="padding:15px 16px;border-radius:10px;border:1px solid #E6DFDA;background:#FFFFFF;font-size:15px;color:#1F1714;outline:none" style-focus="border-color:#8E2B22">
+          </div>
+          <select style="padding:15px 16px;border-radius:10px;border:1px solid #E6DFDA;background:#FFFFFF;font-size:15px;color:#1F1714;outline:none"><option>상담 분야 · 셀프로 소액소송</option><option>상담 분야 · 셀프로 의료기관</option><option>상담 분야 · 셀프로 손해배상</option><option>상담 분야 · 셀프로 회사설립</option><option>상담 분야 · 기타</option></select>
+          <textarea rows="6" placeholder="분쟁 상황을 간단히 적어주세요." style="padding:15px 16px;border-radius:10px;border:1px solid #E6DFDA;background:#FFFFFF;font-size:15px;color:#1F1714;outline:none;resize:vertical" style-focus="border-color:#8E2B22"></textarea>
+        </div>
+        <label style="margin-top:16px;display:flex;align-items:center;gap:10px;font-size:14px;color:#5A4F49"><input type="checkbox" required="" style="width:18px;height:18px;accent-color:#8E2B22">개인정보 수집·이용에 동의합니다.</label>
+        <button type="submit" style="margin-top:20px;padding:16px;border:none;border-radius:12px;background:linear-gradient(135deg,#A63A2E,#7A231B);color:#FFFFFF;font-size:16px;font-weight:700;cursor:pointer" style-hover="filter:brightness(1.08)">문의 접수하기</button>
+      </form>
+    </sc-if>
+    <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#FFFFFF;border:1px solid #F1ECE8;border-radius:22px;padding:48px 28px">
+        <img src="assets/seal.png" alt="" style="width:64px;height:64px;border-radius:50%">
+        <h3 style="margin:18px 0 0;font-size:22px;font-weight:700">문의가 접수되었습니다</h3>
+        <p style="margin:6px 0 0;font-size:15px;color:#6B605A;line-height:1.5">담당자가 확인 후 연락드리겠습니다.</p>
+        <button onClick="{{ reset }}" style="margin-top:22px;padding:10px 18px;border-radius:10px;border:1px solid #ECE4DF;background:#FFFFFF;font-size:14px;font-weight:600;color:#1F1714;cursor:pointer">새 문의 작성</button>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+<footer style="border-top:1px solid #F1ECE8;background:#FBF8F6">
+  <div style="max-width:1200px;margin:0 auto;padding:48px 28px;display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap">
+    <div style="display:flex;flex-direction:column">
+      <div style="display:flex;align-items:center;gap:9px"><img src="assets/seal.png" alt="" style="width:30px;height:30px;border-radius:50%"><span style="font-size:20px;font-weight:800;letter-spacing:-0.04em">셀프<span style="color:#8E2B22">로</span></span></div>
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:4px;font-size:13px;color:#8A7F79;line-height:1.5"><span>상호 셀프로 · 대표 홍길동 · 사업자등록번호 000-00-00000</span><span>주소 서울특별시 ○○구 ○○로 00 · 대표전화 0000-0000</span></div>
+    </div>
+    <div style="display:flex;gap:20px;font-size:13px;align-items:flex-end;color:#8A7F79"><span>이용약관</span><span style="color:#1F1714;font-weight:600">개인정보처리방침</span></div>
+  </div>
+  <div style="border-top:1px solid #F1ECE8"><div style="max-width:1200px;margin:0 auto;padding:16px 28px;font-size:12px;color:#A89E98">© 2026 SELFLAW. All rights reserved.</div></div>
+</footer>
+
+<sc-if value="{{ showQuick }}" hint-placeholder-val="{{ true }}">
+  <div style="position:fixed;right:20px;bottom:28px;z-index:60;display:flex;flex-direction:column;gap:8px">
+    <a href="#s5" onClick="{{ goContact }}" style="width:62px;height:62px;border-radius:18px;background:linear-gradient(135deg,#A63A2E,#7A231B);color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;box-shadow:0 12px 24px -10px rgba(142,43,34,0.6)" style-hover="color:#FFFFFF">문의접수</a>
+    <a href="#" onClick="{{ noop }}" style="width:62px;height:62px;border-radius:18px;background:#FEE500;color:#1F1714;display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;font-weight:700;line-height:1.35;box-shadow:0 12px 24px -12px rgba(31,23,20,0.35)" style-hover="color:#1F1714">카카오톡<br>상담</a>
+    <a href="#top" onClick="{{ goTop }}" style="width:62px;height:62px;box-sizing:border-box;border-radius:18px;background:#FFFFFF;border:1px solid #ECE4DF;color:#1F1714;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11px;font-weight:700" style-hover="color:#8E2B22"><span style="font-size:16px;line-height:1">↑</span>UP</a>
+  </div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showQuickMenu&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { active: null, submitted: false };
+  items = [['s1','셀프로 소액소송'],['s2','셀프로 의료기관'],['s3','셀프로 손해배상'],['s4','셀프로 회사설립']];
+  go(id, e) {
+    if (e) e.preventDefault();
+    if (id === 'top') return window.scrollTo({ top: 0, behavior: 'smooth' });
+    const el = document.getElementById(id);
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 68, behavior: 'smooth' });
+  }
+  componentDidMount() {
+    this.onScroll = () => {
+      let a = null;
+      for (const [id] of [...this.items, ['s5']]) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top < 160) a = id;
+      }
+      if (a !== this.state.active) this.setState({ active: a });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); }
+  renderVals() {
+    const { active, submitted } = this.state;
+    return {
+      nav: this.items.map(([id, label]) => ({ href: '#' + id, label, color: active === id ? '#8E2B22' : '#4A403B', onClick: e => this.go(id, e) })),
+      goTop: e => this.go('top', e),
+      goContact: e => this.go('s5', e),
+      goPricing: e => this.go('s1', e),
+      noop: e => e.preventDefault(),
+      submitted, notSubmitted: !submitted,
+      submit: e => { e.preventDefault(); this.setState({ submitted: true }); },
+      reset: () => this.setState({ submitted: false }),
+      showQuick: this.props.showQuickMenu ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>
